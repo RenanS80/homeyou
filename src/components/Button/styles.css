@@ -1,0 +1,23 @@
+.btn {
+    padding: 12px 32px;
+}
+
+.btn--primary {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.btn--secondary {
+    color: var(--black);
+    background-color: var(--white);
+    border: 1px solid var(--black);
+}
+
+.btn--primary:hover {
+    opacity: 0.92;
+}
+
+.btn--secondary:hover {
+    color: var(--white);
+    background-color: var(--black);
+}

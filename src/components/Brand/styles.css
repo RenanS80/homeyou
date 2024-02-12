@@ -1,0 +1,10 @@
+.header__brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__brand > div {
+    background-color: var(--black);
+    display: flex;
+}

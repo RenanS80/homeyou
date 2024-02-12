@@ -1,0 +1,25 @@
+header {
+    background-color: var(--white);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 15px;
+}
+
+nav {
+    display: flex;
+    gap: 52px;
+}
+
+nav ul {
+    display: flex;
+    gap: 52px;
+}
+
+.header__icons {
+    display: flex;
+    gap: 32px;
+}
