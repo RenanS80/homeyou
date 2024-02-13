@@ -1,12 +1,16 @@
-import './App.css';
 import Button from './components/Button';
 import Navbar from './components/Navbar';
-import HeroImg from './assets/images/house1.jpg';
-import DesignImg from './assets/images/house2.jpg';
-import Gallery1 from './assets/images/house3.jpg';
-import Gallery2 from './assets/images/house4.jpg';
-import Gallery3 from './assets/images/house5.jpg';
-import Brand from './components/Brand';
+import House1 from './assets/images/house1.jpg';
+import House2 from './assets/images/house2.jpg';
+import House3Lg from './assets/images/house3-lg.jpg';
+import House3Sm from './assets/images/house3-sm.jpg';
+import House4Lg from './assets/images/house4-lg.jpg';
+import House4Sm from './assets/images/house4-sm.jpg';
+import House5Lg from './assets/images/house5-lg.jpg';
+import House5Sm from './assets/images/house5-sm.jpg';
+import Footer from './components/Footer';
+
+import './App.css';
 
 function App() {
   return (
@@ -24,7 +28,7 @@ function App() {
               </div>
             </div>
             <div className="hero__img">
-              <img src={HeroImg} alt="" />
+              <img src={House1} alt="" />
             </div>
           </div>
         </section>
@@ -32,7 +36,7 @@ function App() {
         <section className="design">
           <div className="container">
             <div className="design__img">
-              <img src={DesignImg} alt="" />
+              <img src={House2} alt="" />
               <div></div>
             </div>
             <div className="design__text">
@@ -52,9 +56,18 @@ function App() {
               <p>Se você está entediado com a aparência da decoração de interiores da casa comuns, trabalhamos com designs diferentes e inovadores.</p>
             </div>
             <div className="gallery__img">
-              <img src={Gallery1} alt="" />
-              <img src={Gallery2} alt="" />
-              <img src={Gallery3} alt="" />
+              <picture className="">
+                <source srcSet={House3Lg} media="(min-width: 1240px)" />
+                <img src={House3Sm} alt="" />
+              </picture>
+              <picture className="">
+                <source srcSet={House4Lg} media="(min-width: 1240px)" />
+                <img src={House4Sm} alt="" />
+              </picture>
+              <picture className="">
+                <source srcSet={House5Lg} media="(min-width: 1240px)" />
+                <img src={House5Sm} alt="" />
+              </picture>
             </div>
           </div>
         </section>
@@ -63,41 +76,13 @@ function App() {
           <div className="container">
             <h2>Contato</h2>
             <p>Interessado em entrar em contato com um de nossos profissionais?</p>
-            <Button type="secondary" />
+            <div>
+              <Button type="secondary" />
+            </div>
           </div>
         </section>
 
-        <footer>
-          <div className="container">
-            <Brand />
-            <div className="footer__content">
-              <div>
-                <p>Produtos</p>
-                <div className="footer__links">
-                  <a href="">Mobília</a>
-                  <a href="">Segurança</a>
-                  <a href="">Design Interior</a>
-                </div>
-              </div>
-              <div>
-                <p>Mais Informações</p>
-                <div className="footer__links">
-                  <a href="">Contato</a>
-                  <a href="">Sobre nós</a>
-                  <a href="">Termos e Condições</a>
-                </div>
-              </div>
-              <div>
-                <p>Redes Sociais</p>
-                <div className="footer__links">
-                  <a href="">Pinterest</a>
-                  <a href="">Facebook</a>
-                  <a href="">Instagram</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+       <Footer />
     </>
 
   );

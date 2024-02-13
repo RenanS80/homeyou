@@ -9,12 +9,7 @@ header .container {
     padding: 36px 15px;
 }
 
-nav {
-    display: flex;
-    gap: 52px;
-}
-
-nav ul {
+nav, nav ul {
     display: flex;
     gap: 52px;
 }
@@ -22,4 +17,15 @@ nav ul {
 .header__icons {
     display: flex;
     gap: 32px;
+}
+
+/* -- Media Queries -- */
+@media (max-width: 766px) {
+    nav {
+        display: none;
+    }
+
+    header .container {
+        justify-content: center;
+    }
 }

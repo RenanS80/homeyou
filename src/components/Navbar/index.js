@@ -11,7 +11,7 @@ function Navbar() {
             <div className="container">
                 <div className="header__brand">
                     <Brand />
-                    <h3>HomeYou</h3>
+                    <h3>HOMEYOU</h3>
                 </div>
 
                 <nav>
