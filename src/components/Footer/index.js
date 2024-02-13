@@ -1,40 +1,49 @@
-import Brand from '../Brand';
-import './styles.css';
+import { Link } from "react-router-dom";
+import Brand from "../Brand";
+
+import "./styles.css";
 
 function Footer() {
-    return(
-        <footer>
-        <div className="container">
-          <Brand />
-          <div className="footer__content">
-            <div>
-              <p>Produtos</p>
-              <div className="footer__links">
-                <a href="#">Mobília</a>
-                <a href="#">Segurança</a>
-                <a href="#">Design Interior</a>
-              </div>
+  
+  const anchorNavigate = (id) => {
+    window.location.href = `#${id}`;
+  };
+
+  return (
+    <footer>
+      <div className="container">
+        <Brand />
+        <div className="footer__content">
+          <div>
+            <p>Produtos</p>
+            <div className="footer__links">
+              <Link to="#">Mobília</Link>
+              <Link to="#">Segurança</Link>
+              <Link to="#" onClick={() => anchorNavigate("design")}>Design Interior</Link>
             </div>
-            <div>
-              <p>Mais Informações</p>
-              <div className="footer__links">
-                <a href="#contact">Contato</a>
-                <a href="#">Sobre nós</a>
-                <a href="#">Termos e Condições</a>
-              </div>
+          </div>
+          <div>
+            <p>Mais Informações</p>
+            <div className="footer__links">
+              <Link to="#" onClick={() => anchorNavigate("contact")}>
+                Contato
+              </Link>
+              <Link to="#">Sobre nós</Link>
+              <Link to="#">Termos e Condições</Link>
             </div>
-            <div>
-              <p>Redes Sociais</p>
-              <div className="footer__links">
-                <a href="#">Pinterest</a>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-              </div>
+          </div>
+          <div>
+            <p>Redes Sociais</p>
+            <div className="footer__links">
+              <Link to="#">Pinterest</Link>
+              <Link to="#">Facebook</Link>
+              <Link to="#">Instagram</Link>
             </div>
           </div>
         </div>
-      </footer>
-    );
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import Button from './components/Button';
 import Navbar from './components/Navbar';
 import House1 from './assets/images/house1.jpg';
@@ -24,16 +26,16 @@ function App() {
               <p>Encontre uma variedade de propriedades que combinam com você. Esqueça todas as dificuldades em encontrar uma residência</p>
               <div className="hero__btn-group">
                 <Button type="primary" />
-                <a href="#" role="button" className="btn--underlined">Mais sobre nós</a>
+                <NavLink to="#" role="button" className="btn--underlined">Mais sobre nós</NavLink>
               </div>
             </div>
             <div className="hero__img">
-              <img src={House1} alt="" />
+              <img src={House1} alt="Casa" />
             </div>
           </div>
         </section>
 
-        <section className="design">
+        <section id="design">
           <div className="container">
             <div className="design__img">
               <img src={House2} alt="" />
@@ -44,7 +46,7 @@ function App() {
                 <h2>Design Minimalista</h2>
                 <p>Móveis apenas essenciais e com design moderno, além de revestimentos bonitos e em cores neutras para manter a casa sempre com um estilo clean e suave.</p>
               </div>
-              <a href="#" role="button" className="btn--underlined">Quero saber mais sobre os designs</a>
+              <NavLink to="#" role="button" className="btn--underlined">Quero saber mais sobre os designs</NavLink>
             </div>
           </div>
         </section>
@@ -58,15 +60,15 @@ function App() {
             <div className="gallery__img">
               <picture className="">
                 <source srcSet={House3Lg} media="(min-width: 1240px)" />
-                <img src={House3Sm} alt="" />
+                <img src={House3Sm} alt="Casa" />
               </picture>
               <picture className="">
                 <source srcSet={House4Lg} media="(min-width: 1240px)" />
-                <img src={House4Sm} alt="" />
+                <img src={House4Sm} alt="Casa" />
               </picture>
               <picture className="">
                 <source srcSet={House5Lg} media="(min-width: 1240px)" />
-                <img src={House5Sm} alt="" />
+                <img src={House5Sm} alt="Casa" />
               </picture>
             </div>
           </div>

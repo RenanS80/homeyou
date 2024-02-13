@@ -132,11 +132,11 @@ ul li {
 
 
 /* -- Section Design -- */
-.design {
+#design {
   background-color: var(--white);
 }
 
-.design .container {
+#design .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -231,7 +231,7 @@ ul li {
 
 /* -- Media Queries -- */
 @media (max-width: 1175px) {
-  .design .container {
+  #design .container {
     flex-direction: column;
     gap: 40px;
   }
@@ -275,7 +275,7 @@ ul li {
     display: none;
   }
 
-  .design .container {
+  #design .container {
     padding: 40px 15px 75px 15px;
   }
 }

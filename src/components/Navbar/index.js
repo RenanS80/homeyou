@@ -1,11 +1,18 @@
+import { Link } from 'react-router-dom';
+
+import Brand from '../Brand';
 import User from '../../assets/images/user-icon.svg';
 import Heart from '../../assets/images/heart-icon.svg';
 import Search from '../../assets/images/search-icon.svg';
 
 import './styles.css';
-import Brand from '../Brand';
 
 function Navbar() {
+
+    const anchorNavigate = (id) => {
+        window.location.href = `#${id}`;
+    };
+    
     return(
         <header>
             <div className="container">
@@ -17,13 +24,13 @@ function Navbar() {
                 <nav>
                     <ul>
                         <li>
-                            <a href="#inicio">Início</a>
+                            <Link to="#">Início</Link>
                         </li>
                         <li>
-                            <a href="#gallery">Galeria</a>
+                            <Link to="#" onClick={() => anchorNavigate('gallery')}>Galeria</Link>
                         </li>
                         <li>
-                            <a href="#contact">Contato</a>
+                            <Link to="#" onClick={() => anchorNavigate('contact')}>Contato</Link>
                         </li>
                     </ul>
                     <div className="header__icons">
